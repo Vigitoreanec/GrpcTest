@@ -9,7 +9,7 @@ namespace GrpcTest.Services
         {
             return Task.FromResult(new HelloReply
             {
-                Message = "Hello " + request.Name
+                Message = $"Server {DateTime.UtcNow.ToShortTimeString()} => Hello " + request.Name
             });
         }
     }
